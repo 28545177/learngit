@@ -48,30 +48,49 @@ git restore来撤销修改。其中，
 （2）将缓冲区的数据恢复到工作区：git restore <file>
 
 创建远程库
-首先添加ssh-key
-在Github上载入ssh-key，然后创建库
-创建后，Github的提示信息
+（1）首先创建ssh-key
+ssh-keygen -t rsa -C "youremail@example.com"
+在用户主目录下，生成.ssh目录，里面有id_rsa和id_rsa.pub这两个文件。这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
 
-…or create a new repository on the command line
- echo "# learngit" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/28545177/learngit.git
-git push -u origin master
+（2）在Github上载入ssh-key
+登陆GitHub，打开“Account settings”，“SSH Keys”页面，然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容；
 
-…or push an existing repository from the command line
- git remote add origin https://github.com/28545177/learngit.git
-git push -u origin master
+（3）创建库，创建后，Github的提示信息
+	…or create a new repository on the command line
+	 echo "# learngit" >> README.md
+	git init
+	git add README.md
+	git commit -m "first commit"
+	git remote add origin https://github.com/28545177/learngit.git
+	git push -u origin master
 
-…or import code from another repository
-You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+	…or push an existing repository from the command line
+	 git remote add origin https://github.com/28545177/learngit.git
+	git push -u origin master
 
-输入：git remote add origin https://github.com/28545177/learngit.git，在本地关联远程库；
-输入：git push -u origin master
+	…or import code from another repository
+	You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+（4）根据提示，输入：
+git remote add origin https://github.com/28545177/learngit.git，在本地关联远程库；
+输入：git push -u origin master 第一次，使用参数-u，上传所有的分支。
+正常使用时，输入git push origin master，
 将本地数据推送到远程库中；
-首次需要参数-u，上传所有的分支。正常使用时，只需要调用
-git push origin master即可；
+
+（5）从远程库下载数据，输入：
+git clone git@github.com:28545177/gitskills.git
+
+回家后，创建新的文件夹，或者直接就用昨天文件夹作为本地仓库，调用git clone将今天修改的数据下载到本地工作区；
+
+
+
+
+
+
+
+
+
+
 
 
 
