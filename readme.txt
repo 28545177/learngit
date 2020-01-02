@@ -47,6 +47,31 @@ git restore来撤销修改。其中，
 （1）删除缓冲区的内容：git rm <file>
 （2）将缓冲区的数据恢复到工作区：git restore <file>
 
+创建远程库
+首先添加ssh-key
+在Github上载入ssh-key，然后创建库
+创建后，Github的提示信息
+
+…or create a new repository on the command line
+ echo "# learngit" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/28545177/learngit.git
+git push -u origin master
+
+…or push an existing repository from the command line
+ git remote add origin https://github.com/28545177/learngit.git
+git push -u origin master
+
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+输入git remote add origin https://github.com/28545177/learngit.git，在本地关联远程库；
+
+
+
+
 
 
 
