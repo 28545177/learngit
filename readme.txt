@@ -82,7 +82,14 @@ git clone git@github.com:28545177/gitskills.git
 
 回家后，创建新的文件夹，或者直接就用昨天文件夹作为本地仓库，调用git clone将今天修改的数据下载到本地工作区；
 
-
+使用分支功能
+Git鼓励大量使用分支：
+查看分支：git branch
+创建分支：git branch <name>
+切换分支：git checkout <name>或者git switch <name>
+创建+切换分支：git checkout -b <name>或者git switch -c <name>
+合并某分支到当前分支：git merge <name>
+删除分支：git branch -d <name>
 
 
 
