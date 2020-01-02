@@ -67,7 +67,11 @@ git push -u origin master
 …or import code from another repository
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 
-输入git remote add origin https://github.com/28545177/learngit.git，在本地关联远程库；
+输入：git remote add origin https://github.com/28545177/learngit.git，在本地关联远程库；
+输入：git push -u origin master
+将本地数据推送到远程库中；
+首次需要参数-u，上传所有的分支。正常使用时，只需要调用
+git push origin master即可；
 
 
 
