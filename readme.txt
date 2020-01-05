@@ -110,8 +110,20 @@ git tag v0.9 f52c633	#给f52c633打标签v0.9
 查看所有标签
 git tag
 
+删除标签  -d
+git tag -d <tagname>
 
+标签上传远端
+标签存在本地，不会上传到远程。如果要上传到远程的话，使用命令：
+git push origin <tagname>
+如果要上传所有的本地标签，使用：
+git push origin --tags
 
+删除远端标签
+1、删除本地标签
+git tag -d <tagname>
+2、从远端删除，使用的还是push，格式为：
+git push origin :refs/tags/<tagname>
 
 
 
